@@ -7,6 +7,9 @@ import { HomeComponent } from './home/home.component';
 import { WeatherComponent } from './weather/weather.component';
 import { AddComponent } from './add/add.component';
 import { DetailsComponent } from './details/details.component';
+import { WeatherService } from './weather.service';
+import { UIService } from './ui.service'; 
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,13 +17,17 @@ import { DetailsComponent } from './details/details.component';
     HomeComponent,
     WeatherComponent,
     AddComponent,
-    DetailsComponent
+    DetailsComponent, 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    WeatherService,
+    UIService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

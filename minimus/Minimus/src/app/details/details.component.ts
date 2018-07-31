@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-//import {WeatherService} from '../../services/weather/weather.service';
-import {Subscription} from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
+import { WeatherService } from '../weather.service';
+import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
@@ -44,7 +44,7 @@ export class DetailsComponent implements OnInit {
   sub4: Subscription;
   sub5: Subscription;
 
-  constructor(public activeRouter, public weather: WeatherService) {
+  constructor(public activeRouter:ActivatedRoute, public weather: WeatherService) {
 
    }
 
